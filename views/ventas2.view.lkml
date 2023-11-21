@@ -73,6 +73,14 @@ view: ventas2 {
     type: number
     sql: ${TABLE}.Edad ;;
   }
+  ######dim created
+  dimension: rango_edad {
+    type: tier
+    tiers: [18, 25, 35, 45, 55, 65, 75, 90]
+    style: integer
+    sql: ${edad} ;;
+  }
+  ######
   dimension: fecha_venta {
     type: string
     sql: ${TABLE}.FechaVenta ;;
