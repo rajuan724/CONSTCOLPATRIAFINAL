@@ -76,7 +76,7 @@ view: ventas2 {
   ######dim created
   dimension: rango_edad {
     type: tier
-    tiers: [18, 29, 39, 50, 60, 70, 80]
+    tiers: [0,18, 29, 39, 50, 60, 70, 80]
     style: integer
     sql: ${edad} ;;
   }
