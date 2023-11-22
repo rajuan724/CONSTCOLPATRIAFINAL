@@ -134,7 +134,7 @@ view: ventas2 {
     sql: ${TABLE}.Tipo ;;
   }
   dimension: valor_neto {
-    type: string
+    type: number
     sql: ${TABLE}.ValorNeto ;;
   }
   dimension: visita_crm {
