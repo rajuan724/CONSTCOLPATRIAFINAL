@@ -1,5 +1,5 @@
 view: ventas2 {
-  sql_table_name: `constructora-colpatria-401514.VENTA.ventas2` ;;
+  sql_table_name: `VENTA.ventas2` ;;
 
   dimension: area {
     type: number
