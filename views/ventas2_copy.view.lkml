@@ -1,13 +1,9 @@
-view: ventas2 {
-  sql_table_name: `constructora-colpatria-401514.VENTA.ventas2` ;;
+view: ventas2_copy {
+  sql_table_name: `VENTA.ventas2_copy` ;;
 
   dimension: area {
     type: number
     sql: ${TABLE}.Area ;;
-  }
-  dimension: comprador_barrio {
-    type: string
-    sql: ${TABLE}.CompradorBarrio ;;
   }
   dimension: comprador_cargo {
     type: string
@@ -77,6 +73,14 @@ view: ventas2 {
     type: number
     sql: ${TABLE}.Edad ;;
   }
+  ######dim created
+  dimension: rango_edad {
+    type: tier
+    tiers: [0,18, 29, 39, 50, 60, 70, 80]
+    style: integer
+    sql: ${edad} ;;
+  }
+  ######
   dimension: fecha_venta {
     type: string
     sql: ${TABLE}.FechaVenta ;;
@@ -89,6 +93,7 @@ view: ventas2 {
     sql: ${TABLE}.FechaVisita ;;
   }
   dimension: id_comprador {
+    primary_key: yes
     type: number
     sql: ${TABLE}.IdComprador ;;
   }
@@ -129,7 +134,7 @@ view: ventas2 {
     sql: ${TABLE}.Tipo ;;
   }
   dimension: valor_neto {
-    type: string
+    type: number
     sql: ${TABLE}.ValorNeto ;;
   }
   dimension: visita_crm {
