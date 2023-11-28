@@ -23,3 +23,4 @@ explore: mapas1 {
     relationship: many_to_many
   }
 }
+explore: ventas2 {}
