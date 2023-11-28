@@ -156,4 +156,12 @@ view: ventas2 {
   measure: count {
     type: count
   }
+  ######dim created
+  dimension: rango_edad {
+    type: tier
+    tiers: [0,18, 29, 39, 50, 60, 70, 80]
+    style: integer
+    sql: ${edad} ;;
+  }
+  ######
 }
