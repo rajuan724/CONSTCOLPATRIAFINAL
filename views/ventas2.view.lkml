@@ -153,9 +153,6 @@ view: ventas2 {
     type: string
     sql: ${TABLE}.VtaNombreProyecto ;;
   }
-  measure: count {
-    type: count
-  }
   ######dim created
   dimension: rango_edad {
     type: tier
@@ -164,4 +161,8 @@ view: ventas2 {
     sql: ${edad} ;;
   }
   ######
+  measure: count {
+    type: count
+  }
+
 }
