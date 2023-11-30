@@ -24,3 +24,4 @@ explore: mapas1 {
   }
 }
 explore: ventas2 {}
+explore: ventas2_copy {}
