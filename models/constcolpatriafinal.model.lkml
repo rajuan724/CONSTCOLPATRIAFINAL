@@ -19,10 +19,8 @@ explore: mapas1 {
   }
 
   join:ventas2{
-    type: full_outer
+    type: left_outer
     sql_on: ${mapas1.region}=${ventas2.departamento} ;;
     relationship: many_to_many
   }
 }
-explore: ventas2 {}
-explore: ventas2_copy {}
